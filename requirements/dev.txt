@@ -1,0 +1,8 @@
+-r common.txt
+
+fabric
+sphinx
+coverage
+django-nose>=1.4
+#django-fixture-magic # advanced fixture dumping
+django-debug-toolbar

@@ -1,0 +1,11 @@
+Django>=1.8
+mysql-python
+django-admin-bootstrapped<=2.5
+djangorestframework
+
+#partial dates
+git+git://github.com/dracos/django-date-extensions.git
+six
+
+-e git://github.com/emory-libraries/django-eultheme#egg=django_eultheme
+django-widget-tweaks
