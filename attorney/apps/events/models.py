@@ -19,6 +19,8 @@ class Event(models.Model):
     grantees = models.ManyToManyField(Grantee, blank=True)
     location = models.ForeignKey(Place, blank=True, null=True)
 
-    def __unicode__self():
+    def __unicode__(self):  
         return self.event_id
 
+    class Meta:
+        ordering = ['event_id']

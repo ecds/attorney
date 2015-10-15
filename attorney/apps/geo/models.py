@@ -13,7 +13,7 @@ class Place(models.Model):
     lon = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)
     uri = models.URLField(max_length=200, blank=True, verbose_name="Geonames URL")
 
-    def __unicode__self():
+    def __unicode__(self):  
         return self.name
 
     # TODO: set Meta class requiring unique lat-lon combination

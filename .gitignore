@@ -7,4 +7,5 @@ build/
 *.db
 nosetests.xml
 
-danowski/localsettings.py
+attorney/localsettings.py
+venv

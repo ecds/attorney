@@ -11,11 +11,11 @@ class Grantee(models.Model):
     name = models.CharField(max_length=255)
     title = models.CharField(max_length=255, blank=True)
     identifiers = models.ManyToManyField('Identifier', blank=True)
-    professional_location = models.ForeignKey(Place, blank=True, null=True, related_name='professional_location')
-    standard_location = models.ForeignKey(Place, blank=True, null=True, related_name='standard_location')
+    location = models.ForeignKey(Place, blank=True, null=True, related_name='standard_location')
     alt_location = models.ForeignKey(Place, blank=True, null=True, related_name='alt_location')
+    comments = models.TextField(blank=True)
 
-    def __unicode__self():
+    def __unicode__(self):  
         return self.name
 
 
@@ -28,7 +28,7 @@ class GrantorName(models.Model):
     title = models.CharField(max_length=255, blank=True)
     event = models.ForeignKey('events.Event')
 
-    def __unicode__self():
+    def __unicode__(self):  
         return self.name
 
 
@@ -39,5 +39,5 @@ class Identifier(models.Model):
 
     name = models.CharField(max_length=255)
 
-    def __unicode__self():
+    def __unicode__(self):  
         return self.name
